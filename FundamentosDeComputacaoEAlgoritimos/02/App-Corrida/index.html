@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>App para Calcular Corrida de Carroca</title>
+    </head>
+    <body>
+        <h2>Calcule Sua Corrida de Carroca</h2>
+        <p>
+            Distancia em KM: <input id="input1" placeholder="99 Km">
+        </p>
+        <p>
+            Tempo em Minutos: <input id="input2" placeholder="14 minutos">
+        </p>
+        <button onclick="calcular()">Calcular</button>
+    </body>
+    <script>
+
+        function calcular()
+        {
+            // Organizar as Entradas
+            var tarifaDinamica = 0.32;
+            var distEmKM   = document.getElementById("input1").value;
+            var tempoEmMin = document.getElementById("input2").value;
+
+            //Validar Entradas
+            if ( distEmKM == '' || tempoEmMin == '' )
+            {
+                alert("Informar valores!");
+                return;
+            }
+
+            //Efetuar Cálculo
+            alert("Calculando corrida...");
+            var result = distEmKM * tempoEmMin * tarifaDinamica;
+
+            //OUTPUT
+            alert("Sua Corrida dará R$: " + result);
+        }
+        
+    </script>
+</html>

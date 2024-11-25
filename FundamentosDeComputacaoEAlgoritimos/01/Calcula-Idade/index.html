@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Mini App de Calcular Idade</title>    
+    </head>    
+    <body>
+        <h2>Calcule sua Idade em Anos:</h2>
+        <p>Entre o ano do seu nascimento:</p>
+        <input id="input" placeholder="1994" >
+        <button onclick="calcular()">Calcular</button>
+    </body>
+</html>
+
+<script>
+    function calcular( )
+    {
+        var idade = 2023 -  document.getElementById("input").value;
+        alert("Sua Idade e: " + idade + " ano(s)" );
+    }
+</script>

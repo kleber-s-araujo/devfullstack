@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Browser Experimental</title>
+</head>
+
+<body>
+
+    <script>
+        //var aba1 = 'https://github.com/omariosouto/pucpos-code/blob/main/a2b1/02-browser/style.css';
+        //var aba2 = 'https://salavirtual.pucrs.br/curso/desenvolvimento-full-stack-27/conteudo?item=455543';
+        //var aba3 = 'https://github.com/omariosouto';
+
+        var aba1 = {
+            titulo: 'Aba 1',
+            url: 'https://github.com/omariosouto/pucpos-code/blob/main/a2b1/02-browser/style.css'
+        }
+
+        var aba2 = {
+            titulo: 'Aba 2',
+            url: 'https://salavirtual.pucrs.br/curso/desenvolvimento-full-stack-27/conteudo?item=455543'
+        }
+
+        var aba3 = {
+            titulo: 'Aba 3',
+            url: 'https://github.com/omariosouto'
+        }
+
+        const abas = [
+            aba1,
+            aba2,
+            aba3
+        ];
+
+        // [PROCESSAMENTO]
+        for (aba of abas) {
+            var atual = document.body.innerHTML;
+            document.body.innerHTML = atual + `<li><a href="${aba.url}">${aba.titulo}</a></li>`
+        }
+
+    // O que tem em uma aba do navgador
+    //titulo
+    //url
+    //conteúdo
+    </script>
+
+    <!-- <link rel="stylesheet" href="./style.css" /> -->
+
+</body>
+
+</html>

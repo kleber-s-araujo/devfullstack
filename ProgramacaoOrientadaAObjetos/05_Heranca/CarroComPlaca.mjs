@@ -1,4 +1,4 @@
-import { Carro } from "../04/carro.mjs"
+import { Carro } from "../04_ClasseSimples/carro.mjs"
 
 export class CarroComPlaca extends Carro {
     #_placa

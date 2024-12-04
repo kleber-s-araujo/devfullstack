@@ -32,8 +32,8 @@ jobs:
     - name: Instalação do Mocha e dos Pacotes de Teste
       run: |
         echo ${{ github.workspace }},
-        ls,
         cd ./DevOps,
+        echo ${{ github.workspace }},
         ls
       
       #cd ./DevOps\01_Conversao-Temperatura\src,

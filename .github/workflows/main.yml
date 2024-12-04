@@ -27,8 +27,10 @@ jobs:
         node-version: 20.10.0
 
     - name: Instalação do Mocha e dos Pacotes de Teste
-      run: 
+      run: /
+        cd DevOps
         echo check dir
+        ls
         #cd ./DevOps\01_Conversao-Temperatura\src,
         # npm install -g mocha
         # npm install

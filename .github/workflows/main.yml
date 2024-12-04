@@ -14,17 +14,14 @@ on:
 
 jobs:
   # Job name
-  build:
+  CI:
     runs-on: ubuntu-latest
 
     # Sequência de Tarefas que serão executadas no job
     steps:
     - uses: actions/checkout@v4
     
-    - name: Run a one-line script
-      run: echo Hello, World!!!
-
-    - name: Run a multi-line Script
-      run: | 
-        echo Add another Action to build,
-        echo test and deploy your project.
+    - name: Setup do Node.js
+      uses: actions/setup-node@v4.1.0
+      with: 
+        node-version: 20.10.0

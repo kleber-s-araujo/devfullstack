@@ -16,7 +16,10 @@ jobs:
   # Job name
   CI:
     runs-on: ubuntu-latest
-
+    defaults:
+      run:
+        working-directory: ./DevOps/01_Conversao-Temperatura
+        
     # Sequência de Tarefas que serão executadas no job
     steps:
     - uses: actions/checkout@v4
@@ -28,10 +31,8 @@ jobs:
 
     - name: Instalação do Mocha e dos Pacotes de Teste
       run: |
-        echo check dir
-        ls,
-        cd /DevOps,
         echo check dir,
+        echo ${{ github.workspace }},
         ls
       
       #cd ./DevOps\01_Conversao-Temperatura\src,

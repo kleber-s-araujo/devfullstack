@@ -33,6 +33,7 @@ jobs:
       run: |
         echo ${{ github.workspace }},
         ls
+        echo README.md
       
       #cd ./DevOps\01_Conversao-Temperatura\src,
       # npm install -g mocha

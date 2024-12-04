@@ -31,11 +31,12 @@ jobs:
 
     - name: Instalação do Mocha e dos Pacotes de Teste
       run: |
-        echo ${{ github.workspace }},
-        ls
-        cat README.md
-        echo `cat README.md`
+        cd src;
+        npm install -g mocha;
+        npm install
+        
+      # echo ${{ github.workspace }},
+      # ls
+      # cat README.md
+      # echo `cat README.md`
       
-      #cd ./DevOps\01_Conversao-Temperatura\src,
-      # npm install -g mocha
-      # npm install

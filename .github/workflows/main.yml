@@ -23,20 +23,27 @@ jobs:
     # Sequência de Tarefas que serão executadas no job
     steps:
     - uses: actions/checkout@v4
-    
+
+    # Configurando Ambiente Node -> Versão tem que ser igual ao app
     - name: Setup do Node.js
       uses: actions/setup-node@v4.1.0
       with: 
         node-version: 20.10.0
-
+        
+    # Configuração do Ambiente de Teste
     - name: Instalação do Mocha e dos Pacotes de Teste
       run: |
         cd src;
         npm install -g mocha;
         npm install
-        
-      # echo ${{ github.workspace }},
-      # ls
-      # cat README.md
-      # echo `cat README.md`
+
+    # Execução dos Testes
+    - name: Execução dos Testes
+      run: mocha src/test/convert.js
+
+      
+    # echo ${{ github.workspace }},
+    # ls
+    # cat README.md
+    # echo `cat README.md`
       

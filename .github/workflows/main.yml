@@ -32,7 +32,7 @@ jobs:
     - name: Instalação do Mocha e dos Pacotes de Teste
       run: |
         echo ${{ github.workspace }},
-        cd ./DevOps,
+        cd src,
         echo ${{ github.workspace }},
         ls
       

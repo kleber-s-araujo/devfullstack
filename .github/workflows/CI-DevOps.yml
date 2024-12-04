@@ -48,7 +48,7 @@ jobs:
       uses: docker/build-push-action@v6.10.0
       with:
         context: ./DevOps/01_Conversao-Temperatura/src
-        file: Dockerfile
+        file: ./DevOps/01_Conversao-Temperatura/src/Dockerfile
         push: true
         tags: |
           kleberslvaraujo/aula-conv-temp:v1

@@ -14,7 +14,6 @@ A aplicação é exposta usando a porta 8080
     5. docker tag  kleberslvaraujo/aula-conv-temp:v1  kleberslvaraujo/aula-conv-temp:latest
     6. docker push kleberslvaraujo/aula-conv-temp:latest
 
-
 ### Pipeline de CI
 Na pasta workflows, há a configuração de um Pipeline de CI (Continuous Integration) para o projeto de Conversão de Temperatura criado na aba Actions do GitHub.
 Este pipeline faz a configuração do ambiente e teste automático.

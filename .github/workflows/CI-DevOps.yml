@@ -60,7 +60,7 @@ jobs:
         file: ./DevOps/01_Conversao-Temperatura/src/Dockerfile
         push: true
         tags: |
-          kleberslvaraujo/aula-conv-temp:{{github.run_number}}
+          kleberslvaraujo/aula-conv-temp:${{github.run_number}}
           kleberslvaraujo/aula-conv-temp:latest
     
     # echo ${{ github.workspace }},

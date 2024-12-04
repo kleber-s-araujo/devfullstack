@@ -47,8 +47,8 @@ jobs:
       # uses: docker/build-push-action@48aba3b46d1b1fec4febb7c5d0c644b249a11355
       uses: docker/build-push-action@v6.10.0
       with:
-        context: ./src
-        file: ./src/Dockerfile
+        context: src
+        file: Dockerfile
         push: true
         tags: |
           kleberslvaraujo/aula-conv-temp:v1

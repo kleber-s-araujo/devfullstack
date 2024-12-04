@@ -46,10 +46,14 @@ __COPY . .__ | Copia o resto da aplicação com a imagem para o Host
 ## Criar Imagem Docker
 docker image build –t dockerapi:1.0 --> Na pasta raíz da aplicação 
 docker cotainer run --publish 8080:3000 --detach --name api dockerapi:1.0 --> Pega a imagem gerada e a executa como um contêiner.
+
 Comando         | Função
 :---------      | :---------
---publish       | Faz o direcionamento do tráfego para a porta onde a API está rodando
+__--publish__   | Faz o direcionamento do tráfego para a porta onde a API está rodando
 8080:3000       | Roda o contêiner na porta 8080, ou seja, acessaremos a API no Browser pela URL http://localhost:8080, porém, internamente a API estará rodando na porta 3000.
---detach        | Executar este contêiner em background, e não trava o processo no terminal ou Visual Studio Code que está executando
---name          | Especifica o nome do contêiner 
+__--detach__    | Executar este contêiner em background, e não trava o processo no terminal ou Visual Studio Code que está executando
+__--name__      | Especifica o nome do contêiner 
 
+### Pipeline de CI
+Na pasta workflows, há a configuração de um Pipeline de CI (Continuous Integration) para o projeto de Conversão de Temperatura criado na aba Actions do GitHub.
+Este pipeline faz a configuração do ambiente e teste automático.

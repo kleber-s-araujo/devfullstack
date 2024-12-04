@@ -1,5 +1,5 @@
-# O que é Docker:
-    > O Docker abstrai a infraestrutura das aplicações através de imagens prontas. O que
+## O que é Docker:
+    O Docker abstrai a infraestrutura das aplicações através de imagens prontas. O que
     temos com o uso do Docker, são máquinas virtuais de baixo custo rodando somente
     com a infraestrutura de aplicações.
     Ex.: Uma imagem muito utilizada no Docker é a Alpine, ela contém apenas 5MB. Essa
@@ -8,28 +8,28 @@
     pacotes SDK do NET, Node.js, PHP e, logo após isso, fazer um pacote. Com o pacote
     montado, pode-se enviar o pacote completo para a produção, sem risco de erros.
     
-    > Embora o Docker seja voltado para infraestrutura, pode-se utilizá-lo também em
+    Embora o Docker seja voltado para infraestrutura, pode-se utilizá-lo também em
     ambientes de desenvolvimento, pois atualmente trabalhamos com vários bancos de
     dados, diversas tecnologias e serviços, isso gera um acúmulo de instalações grandes.
     Para que esse acúmulo não ocorra, podemos utilizar imagens prontas de máquinas com
     SQL Server, MySQL e MongDB e executá-las quando necessário.
 
-# Comandos Docker:
-    Comando | Funcção
-    :---------  :---------
-    docker –version | Verificar a versão do Docker
-    docker run hello-world | Se a imagem hello-world não existir localmente será buscado online e executado
-    docker image ls | Lista as imagens locais
-    docker image rmi <ID_IMAGEM> | Remove uma imagem baixada (Se não em uso)
-    docker image prune | Remove todas as imagens não utilizadas
-    docker container ls | Lista os Containers
-    docker container ls –all | Lista os Containers contempla os de Teste
-    docker container –help | Lista completa do que podemos fazer com um contêiner
-    docker container start <ID_CONTAINER> | Executa um Container
-    docker container stop <ID_CONTAINER>| Finaliza um Container
-    docker container rm <ID_CONTAINER> | Remove um Container
+## Comandos Docker:
+    Comando                                 | Função
+    --------------------------------------- | ----------------------------------------
+    docker –version                         | Verificar a versão do Docker
+    docker run hello-world                  | Se a imagem hello-world não existir localmente será buscado online e executado
+    docker image ls                         | Lista as imagens locais
+    docker image rmi <ID_IMAGEM>            | Remove uma imagem baixada (Se não em uso)
+    docker image prune                      | Remove todas as imagens não utilizadas
+    docker container ls                     | Lista os Containers
+    docker container ls –all                | Lista os Containers contempla os de Teste
+    docker container –help                  | Lista completa do que podemos fazer com um contêiner
+    docker container start <ID_CONTAINER>   | Executa um Container
+    docker container stop <ID_CONTAINER>    | Finaliza um Container
+    docker container rm <ID_CONTAINER>      | Remove um Container
 
-# Docker File:
+## Docker File:
     Arquivo de instruções que o Docker utilizará para saber como publicar uma aplicação em um Contêiner, 
     bem como qual imagem utilizar.
 
@@ -43,7 +43,7 @@
     __CMD__ [‘npm’, ‘start’] | Execute o comando NPM START para iniciar a API
     __COPY . .__ | Copia o resto da aplicação com a imagem para o Host
 
-# Criar Imagem Docker
+## Criar Imagem Docker
     docker image build –t dockerapi:1.0 --> Na pasta raíz da aplicação 
     docker cotainer run --publish 8080:3000 --detach --name api dockerapi:1.0 --> Pega a imagem gerada e a executa como um contêiner.
         Sendo:

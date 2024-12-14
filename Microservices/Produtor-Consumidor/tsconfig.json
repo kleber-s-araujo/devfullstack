@@ -3,7 +3,7 @@
     "module": "Node16",
     "esModuleInterop": true,
     "target": "ESNext",
-    "moduleResolution": "node",
+    "moduleResolution": "Node16",
     "sourceMap": true,
     "outDir": "dist"
   },

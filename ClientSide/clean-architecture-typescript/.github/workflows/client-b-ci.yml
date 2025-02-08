@@ -1,0 +1,46 @@
+on:
+  pull_request:
+    branches:
+      - "main"
+    paths:
+      - "packages/client-b/**"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Set up Yarn 4.2.2
+        run: corepack prepare yarn@4.2.2 --activate
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Run tests
+        run: yarn test:b
+
+      - name: Start client
+        run: yarn start:b &
+
+      - name: Wait for client
+        run: npx wait-on http://localhost:4001
+
+      - name: Run Cypress tests
+        uses: cypress-io/github-action@v4
+        with:
+          project: packages/client-b
+          browser: chrome
+
+      - name: Stop all background tasks
+        run: kill $(jobs -p) || true

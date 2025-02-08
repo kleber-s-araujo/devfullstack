@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "domains/*": ["packages/domains/src/*"],
+      "adapters/*": ["packages/adapters/src/*"]
+    }
+  }
+}

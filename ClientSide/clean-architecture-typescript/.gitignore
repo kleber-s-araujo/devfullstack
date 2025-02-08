@@ -1,0 +1,16 @@
+# Mac
+.DS_Store
+
+#!.yarn/cache
+.pnp.*
+node_modules
+
+# Env
+.env
+
+# Build
+dist
+
+# Next.js
+.next
+

@@ -1,0 +1,27 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "outDir": "./dist/",
+    "module": "ESNext",
+    "esModuleInterop": true,
+    "target": "ES2017",
+    "jsx": "preserve",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "types": ["@testing-library/jest-dom", "jest"],
+    "skipLibCheck": true,
+    "strict": false,
+    "noEmit": true,
+    "incremental": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": ["src", ".next/types/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
+}

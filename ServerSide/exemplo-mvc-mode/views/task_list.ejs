@@ -1,0 +1,15 @@
+<!-- views/task_list.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lista de Tarefas</title>
+</head>
+<body>
+  <h1>Minha Lista de Tarefas</h1>
+  <ol>
+    <% tasks.forEach(task => { %>
+      <li><%= task.title %> | <%= task.description %></li>
+    <% }); %>
+  </ol>
+</body>
+</html>
